@@ -40,13 +40,13 @@ router.post('/email', async (req, res) => {
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'pazzinimurilo@gmail.com',
-                pass: 'mp2031573'
+                user: 'email@email.com', //Trocar essas infos antes do envio
+                pass: 'teste1234'
             }
         });
 
         var mailOptions = {
-            from: 'pazzinimurilo@gmail.com',
+            from: 'email@email.com', //Trocar essa info antes do envio
             to: req.body.mailTo,
             subject: req.body.subject,
             text: req.body.text
